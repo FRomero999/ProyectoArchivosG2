@@ -1,0 +1,100 @@
+1;Laptop Lenovo IdeaPad 3;4599.99;15
+2;Mouse Logitech M170;199.99;120
+3;Teclado Mecanico Redragon K552;749.99;45
+4;Monitor Samsung 24" FHD;2799.99;30
+5;Audifonos Sony WH-1000XM4;5499.99;20
+6;Disco SSD Kingston 480GB;899.99;60
+7;Memoria RAM Corsair 16GB DDR4;1399.99;40
+8;Webcam Logitech C920;1699.99;25
+9;Impresora HP DeskJet 2320;1799.99;18
+10;Router TP-Link Archer C6;999.99;35
+11;Smartphone Xiaomi Redmi Note 12;4899.99;22
+12;Tablet Samsung Galaxy Tab A8;4299.99;16
+13;Smart TV LG 50" 4K;8999.99;10
+14;Bocina Bluetooth JBL Go 3;899.99;55
+15;Power Bank Anker 20000mAh;1199.99;48
+16;Cargador USB-C 65W;549.99;80
+17;Cable HDMI 2.1 2m;299.99;150
+18;Hub USB 3.0 4 puertos;399.99;70
+19;Silla Gamer Xtreme;3499.99;12
+20;Escritorio de Madera 1.2m;2599.99;8
+21;Lampara LED de Escritorio;449.99;65
+22;Base Enfriadora para Laptop;599.99;38
+23;Mochila para Laptop 15.6";799.99;42
+24;Reloj Inteligente Amazfit GTS 4;3299.99;20
+25;Camara de Seguridad TP-Link Tapo;899.99;33
+26;Microfono USB Blue Yeti;2999.99;14
+27;Parlantes Logitech Z313;1299.99;26
+28;Tarjeta Grafica NVIDIA RTX 3060;8999.99;7
+29;Procesador AMD Ryzen 5 5600;3599.99;11
+30;Gabinete NZXT H510;1999.99;15
+31;Fuente de Poder EVGA 600W;1299.99;19
+32;Placa Madre ASUS B550;2799.99;13
+33;Mousepad Gamer XL;249.99;90
+34;Tira LED RGB 5m;349.99;58
+35;Ventilador RGB 120mm Pack 3;699.99;36
+36;Adaptador Bluetooth 5.0;249.99;75
+37;Capturadora de Video HDMI;1599.99;17
+38;Teclado Inalambrico Microsoft;599.99;44
+39;Proyector Epson 3000 lumenes;6999.99;6
+40;Bocina Inteligente Alexa Echo Dot;1299.99;29
+41;Aspiradora Robot Xiaomi;4299.99;9
+42;Cafetera Nespresso Inissia;2499.99;21
+43;Freidora de Aire 5.5L;1899.99;24
+44;Licuadora Oster 600W;1199.99;31
+45;Microondas Samsung 1.1 pies;2299.99;14
+46;Refrigerador Whirlpool 14 pies;15999.99;5
+47;Ventilador de Torre Lasko;1499.99;23
+48;Plancha de Vapor Philips;899.99;27
+49;Batidora KitchenAid Artisan;4999.99;10
+50;Termo Stanley 1L;749.99;50
+51;Smartphone Samsung Galaxy S23;15999.99;13
+52;iPhone 15 Pro Max 256GB;24999.99;8
+53;Laptop HP Pavilion 15;11999.99;11
+54;Laptop Dell XPS 13;18999.99;6
+55;MacBook Air M2 13";21999.99;7
+56;iPad Air 5ta Generacion;13999.99;9
+57;Apple Watch Series 9;9999.99;14
+58;Audifonos AirPods Pro 2;5999.99;25
+59;Bocina JBL Charge 5;3499.99;30
+60;Barra de Sonido Samsung HW-T450;4299.99;12
+61;Monitor LG UltraWide 29";7999.99;10
+62;Monitor Gamer Asus 27" 165Hz;7499.99;16
+63;Teclado Logitech MX Keys;2199.99;28
+64;Mouse Logitech MX Master 3S;2299.99;26
+65;Diadema HyperX Cloud II;1999.99;34
+66;Control Xbox Series X Inalambrico;1799.99;40
+67;Control DualSense PS5;1899.99;37
+68;Consola Nintendo Switch OLED;8999.99;9
+69;Consola PlayStation 5 Slim;12499.99;5
+70;Videojuego FIFA 24 PS5;1499.99;45
+71;Disco Duro Externo Seagate 2TB;1699.99;32
+72;Memoria MicroSD SanDisk 128GB;449.99;110
+73;Memoria USB Kingston 64GB;199.99;200
+74;Adaptador USB-C a HDMI;399.99;85
+75;Cargador Inalambrico 15W;599.99;72
+76;Cable USB-C a USB-C 2m;249.99;160
+77;Regulador de Voltaje 1000VA;1299.99;24
+78;UPS APC 600VA;2499.99;15
+79;Switch de Red 8 Puertos Gigabit;899.99;29
+80;Repetidor WiFi TP-Link AX1500;1099.99;33
+81;Camara Web Logitech C270;699.99;48
+82;Microfono Condensador FIFINE;1299.99;22
+83;Ring Light 18" con Tripie;899.99;35
+84;Green Screen 2x2m;1099.99;18
+85;Tableta Grafica Wacom Intuos;2499.99;12
+86;Impresora Multifuncional Epson EcoTank;3999.99;10
+87;Escaner Canon CanoScan;2299.99;8
+88;Toner HP 415A Negro;1299.99;42
+89;Cartucho de Tinta HP 664 Negro;349.99;95
+90;Papel Bond Carta 500 Hojas;129.99;300
+91;Organizador de Escritorio de Madera;499.99;55
+92;Sillon Reclinable Ejecutivo;5499.99;7
+93;Archivero Metalico 3 Gavetas;2899.99;11
+94;Pizarron Blanco 90x60cm;799.99;20
+95;Calculadora Cientifica Casio FX-991;449.99;60
+96;Agenda Ejecutiva 2026;299.99;80
+97;Boligrafo Pilot G2 Pack 12;199.99;150
+98;Resma Papel Fotografico A4;249.99;65
+99;Maletin para Laptop 15.6";999.99;38
+100;Candado de Seguridad para Laptop;349.99;75
