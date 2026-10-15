@@ -20,8 +20,14 @@ public class Main {
         var productos = fs.cargarProductosArchivoNIO();
         productos.addFirst( new Producto(2L,null,40.0,40));
         productos.forEach(System.out::println);
-        fs.guardarProductosJson(productos,"salida.json");
 
+        try(var oos = new ObjectOutputStream( new FileOutputStream("salida.bin"))){
+            oos.writeObject(productos);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
 
     }

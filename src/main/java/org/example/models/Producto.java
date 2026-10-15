@@ -5,8 +5,10 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
 
+import java.io.Serializable;
+
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public record Producto(
+public record Producto (
         Long id,
         @JsonProperty("name")
         String nombre,
@@ -14,7 +16,7 @@ public record Producto(
         Double precio,
         @JsonIgnore
         Integer stock
-) {
+) implements Serializable {
 
     public Producto{
         if(id == null){
