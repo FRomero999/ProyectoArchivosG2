@@ -1,4 +1,4 @@
-package org.example;
+package org.example.services;
 
 import org.example.models.Producto;
 
@@ -17,19 +17,10 @@ import java.util.List;
  */
 public class FileService {
 
+    private String fileName;
 
-    /**
-     * Ruta o nombre del archivo sobre el que se trabaja.
-     */
-    public static String fileName;
-
-    /**
-     * Establece la ruta del archivo que usaran las operaciones de lectura y escritura.
-     *
-     * @param fileName ruta o nombre del archivo a utilizar
-     */
-    public static void setFileName(String fileName){
-        FileService.fileName = fileName;
+    public FileService(ConfigService config) {
+        this.fileName = config.getProperty("fichero");
     }
 
     /**
@@ -40,8 +31,8 @@ public class FileService {
      * @param productos lista de productos a persistir
      * @throws RuntimeException si ocurre un error de entrada/salida durante la escritura
      */
-    public static void guardarProductosArchivo(List<Producto> productos) {
-        try( var bfr =  new BufferedWriter( new FileWriter(FileService.fileName))) {
+    public void guardarProductosArchivo(List<Producto> productos) {
+        try( var bfr =  new BufferedWriter( new FileWriter(fileName))) {
 
             for( Producto producto : productos){
                 bfr.write(
@@ -67,7 +58,7 @@ public class FileService {
      * @throws IllegalStateException si {@link #fileName} no ha sido establecido (es {@code null})
      * @throws RuntimeException si el archivo no existe o ocurre un error de entrada/salida
      */
-    public static List<Producto> cargarProductosArchivo() {
+    public List<Producto> cargarProductosArchivo() {
 
         if(fileName == null){
             throw new IllegalStateException("fileName is null");
@@ -75,7 +66,7 @@ public class FileService {
 
         var productos = new ArrayList<Producto>();
 
-        try (var bfr = new BufferedReader(new FileReader(FileService.fileName))) {
+        try (var bfr = new BufferedReader(new FileReader(fileName))) {
             String line;
             while( (line = bfr.readLine()) != null ) {
                 productos.add(crearProductoDeString(line));
@@ -96,7 +87,7 @@ public class FileService {
      * @return lista de productos leidos del archivo
      * @throws RuntimeException si ocurre un error de entrada/salida durante la lectura
      */
-    public static List<Producto> cargarProductosArchivoNIO() {
+    public List<Producto> cargarProductosArchivoNIO() {
         var productos = new ArrayList<Producto>();
 
         Path archivo = Path.of(fileName);
@@ -123,7 +114,7 @@ public class FileService {
      * @return lista de productos que coinciden con la palabra clave
      * @throws RuntimeException si ocurre un error de entrada/salida durante la lectura
      */
-    public static List<Producto> cargarProductosArchivoFiltrado(String keyword) {
+    public  List<Producto> cargarProductosArchivoFiltrado(String keyword) {
         Path path = Path.of(fileName);
         List<Producto> salida = new ArrayList<Producto>();
 
