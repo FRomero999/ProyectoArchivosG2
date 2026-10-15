@@ -1,9 +1,18 @@
 package org.example.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRootName;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public record Producto(
         Long id,
+        @JsonProperty("name")
         String nombre,
+        @JsonProperty("price")
         Double precio,
+        @JsonIgnore
         Integer stock
 ) {
 
