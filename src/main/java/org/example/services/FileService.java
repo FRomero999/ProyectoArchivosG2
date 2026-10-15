@@ -1,6 +1,7 @@
 package org.example.services;
 
 import org.example.models.Producto;
+import tools.jackson.databind.ObjectMapper;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -133,6 +134,21 @@ public class FileService {
             throw new RuntimeException(e);
         }
         return salida;
+    }
+
+
+    public void guardarProductosJson(List<Producto> productos,String salida){
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            mapper.writerWithDefaultPrettyPrinter().writeValue(new FileWriter(salida), productos);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public List<Producto> cargarProductosJson(String archivo){
+        /* propuesto en clase */
+        return null;
     }
 
     // Helpers

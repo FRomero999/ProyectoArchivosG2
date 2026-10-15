@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.services.ConfigService;
 import org.example.services.FileService;
+import tools.jackson.databind.ObjectMapper;
 
 import java.io.*;
 import java.util.Properties;
@@ -14,7 +15,11 @@ public class Main {
         ConfigService config = new ConfigService();
         FileService fs = new FileService(config);
 
-        fs.cargarProductosArchivoFiltrado("samsung").forEach(System.out::println);
+
+        var productos = fs.cargarProductosArchivoNIO();
+        fs.guardarProductosJson(productos,"salida.json");
+
+
 
     }
 
