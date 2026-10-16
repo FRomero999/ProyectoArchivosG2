@@ -6,6 +6,11 @@ import org.example.services.FileService;
 import tools.jackson.databind.ObjectMapper;
 
 import java.io.*;
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.Properties;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -21,14 +26,25 @@ public class Main {
         productos.addFirst( new Producto(2L,null,40.0,40));
         productos.forEach(System.out::println);
 
-        try(var oos = new ObjectOutputStream( new FileOutputStream("salida.bin"))){
-            oos.writeObject(productos);
-        } catch (FileNotFoundException e) {
+        fs.guardarProductosBinario(productos,"data.bin");
+
+        System.out.println("salida bin....");
+        fs.cargarProductosBinario("data.bin").forEach(System.out::println);
+
+        try {
+            URI url = new URI("https://cesurformacion.com");
+            var bfr = new BufferedReader(
+                    new InputStreamReader(url.toURL().openStream()));
+            bfr.lines()
+                    .filter(line -> line.contains("CESUR") )
+                    .forEach(System.out::println);
+        } catch (URISyntaxException e) {
+            throw new RuntimeException(e);
+        } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
 
     }
 

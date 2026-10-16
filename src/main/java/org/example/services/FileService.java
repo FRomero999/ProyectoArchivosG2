@@ -1,6 +1,7 @@
 package org.example.services;
 
 import org.example.models.Producto;
+import tools.jackson.core.type.TypeReference;
 import tools.jackson.databind.ObjectMapper;
 
 import java.io.*;
@@ -147,8 +148,31 @@ public class FileService {
     }
 
     public List<Producto> cargarProductosJson(String archivo){
-        /* propuesto en clase */
-        return null;
+        ObjectMapper mapper = new ObjectMapper();
+        List<Producto> productos = new ArrayList<>();
+        try {
+            productos = mapper.readValue(new FileReader(archivo), new TypeReference<ArrayList<Producto>>(){});
+
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        return productos;
+    }
+
+    public List<Producto> cargarProductosBinario(String archivo){
+        try (var ois = new ObjectInputStream(new FileInputStream(archivo))) {
+            return (List<Producto>) ois.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void guardarProductosBinario(List<Producto> productos, String archivo){
+        try (var oos = new ObjectOutputStream(new FileOutputStream(archivo))) {
+            oos.writeObject(productos);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     // Helpers

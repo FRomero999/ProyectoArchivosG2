@@ -14,7 +14,6 @@ public record Producto (
         String nombre,
         @JsonProperty("price")
         Double precio,
-        @JsonIgnore
         Integer stock
 ) implements Serializable {
 
